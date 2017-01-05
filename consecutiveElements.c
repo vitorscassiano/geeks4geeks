@@ -25,5 +25,22 @@
  *
  * =====================================================================================
  */
-#include <stdlib.h>
+#include <stdio.h>
 
+int main(){
+
+    char arr[]  = {'a', 'a', 'b', 'a', 'b', 'b', 'c', 'c', 'd'};
+    int len     = sizeof(arr)/sizeof(arr[0]);
+
+    for(int i = 0; i < len; i++){
+        if(arr[i] == arr[i + 1]){
+            continue;
+        } else if(i == len){
+            printf("%c", arr[i]);
+
+        } else {
+            printf("%c", arr[i]);
+            continue;
+        }
+    }
+}
