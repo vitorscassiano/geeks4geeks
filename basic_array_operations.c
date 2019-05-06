@@ -1,67 +1,41 @@
-/*
- * =====================================================================================
- *
- *       Filename:  findElement.c
- *
- *    Description:  find
- *
- *        Version:  1.0
- *        Created:  10/11/2016 23:22:06
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdio.h>
 
-int findElement(int arr[], int n, int key)
-{
-    int i;
-    for(i = 0; i < n; i++){
-        if (arr[i] == key)
-        {
+int findElement(int arr[], int len, int key) {
+    for(int i = 0; i < len; i++) {
+        if (arr[i] == key) {
             return i;
         }
     }
     return -1;
 }
 
-int insertSorted(int arr[], int n, int key, int capacity)
-{
-    if (n >= capacity)
-    {
-        return n;
+int insertSorted(int arr[], int len, int key, int capacity) {
+    if (len >= capacity) {
+        return len;
     }
 
-    arr[n] = key;
+    arr[len] = key;
 
-    return (n+1);
+    return (len+1);
 }
 
-int deleteElement(int arr[], int n, int key)
-{
-	int pos = findElement(arr, n, key);
-	
-	if (pos == -1)
-	{
-		printf("Element not found");
-		return n;
+int deleteElement(int arr[], int len, int key) {
+	int pos = findElement(arr, len, key);
+
+	if (pos == -1) {
+		printf("Element not found.");
+		return len;
 	}
 
-	for(int i = pos; i < n; i++)
-	{
+	for(int i = pos; i < len; i++) {
 		arr[i] = arr[i+1];
 	}
 
-	return (n-1);
+	return (len-1);
 }
 /*
 // Find element
-int main()
-{
+int main() {
     int arr[] = {12, 34, 10, 6, 40};
     int n = sizeof(arr)/sizeof(arr[0]);
 
@@ -106,8 +80,7 @@ int main()
 */
 
 // Delete element
-int main()
-{
+int main() {
 	int i;
 	int arr[] = {10, 50, 30, 40, 20};
 

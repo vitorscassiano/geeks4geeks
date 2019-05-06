@@ -3,15 +3,15 @@
  *
  *       Filename:  pointer.c
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  05/01/2017 00:45:32
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  YOUR NAME (), 
- *   Organization:  
+ *         Author:  YOUR NAME (),
+ *   Organization:
  *
  * =====================================================================================
  */
